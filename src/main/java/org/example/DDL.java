@@ -52,7 +52,24 @@ public class DDL {
     public void getLength(){
         System.out.println(length);
     }
-}
+
+    public void removeLast(){
+        if (length == 0 || length == 1){
+            head = null;
+            tail = null;
+        }else {
+            Node temp = head;
+                while(temp.next.next != null){
+                    temp = temp.next;
+                }
+            tail = tail.prev;
+            tail.prev = temp.prev;
+            tail.next = null;
+            length--;
+        }
+        }
+    }
+
 
 
 

@@ -4,6 +4,10 @@ public class Main {
     public static void main(String[] args) {
         DDL myDDL = new DDL(1);
         myDDL.append(2);
+        myDDL.append(3);
+        myDDL.append(4);
+        myDDL.append(5);
+        myDDL.removeLast();
         myDDL.printList();
 
 //        LinkedList myLinkedList = new LinkedList(1);
