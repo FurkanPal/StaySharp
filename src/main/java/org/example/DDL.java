@@ -52,7 +52,6 @@ public class DDL {
     public void getLength(){
         System.out.println(length);
     }
-
     public void removeLast(){
         if (length == 0 || length == 1){
             head = null;
@@ -67,8 +66,63 @@ public class DDL {
             tail.next = null;
             length--;
         }
+    }
+
+    public void prepend(int value){
+        Node newNode = new Node(value);
+        Node temp = head;
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        }else {
+            head = newNode;
+            head.next = temp;
+            head.prev = null;
+        }
+        length++;
+    }
+    public void removeFirst(){
+        if (length == 0 || length == 1){
+            head = null;
+            tail = null;
+        }else{
+            Node temp = head;
+            head = head.next;
+        }
+        length--;
+    }
+    public Node get(int index){
+        if (length == 0 || length == 1) return null;
+        Node temp = head;
+        int loop = 1;
+        if (length <= index) return tail;
+        while (temp.next != null && loop != index ){
+            temp = temp.next;
+            loop++;
+        }
+        return temp;
+    }
+
+    public void set(int index, int value){
+        Node temp = get(index);
+        if (temp != null){
+            temp.value = value;
         }
     }
+    public boolean remove(int index){
+        if (length == 0)return false;
+        temp.prev = get(index - 2);
+        Node temp = get(index - 1);
+        temp.next = get(index + 1);
+        length--;
+        return true;
+    }
+}
+
+
+
+
+
 
 
 
