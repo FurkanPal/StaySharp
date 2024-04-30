@@ -111,12 +111,32 @@ public class DDL {
     }
     public boolean remove(int index){
         if (length == 0)return false;
-        temp.prev = get(index - 2);
-        Node temp = get(index - 1);
-        temp.next = get(index + 1);
+        if (index == length){
+            removeLast();
+        }
+        Node temp = get(index -1);
+        temp.next = get(index +1);
         length--;
+
         return true;
     }
+    public void insert(int index, int value){
+        if (index == 0){
+            prepend(value);
+        }
+        if (length <= index){
+            append(value);
+            return;
+        }
+        Node temp = head;
+        for (int i = 1; i < index; i++){
+            temp = temp.next;
+        }
+        Node keepIt = temp.next;
+        temp.next = new Node(value);
+        temp.next.next = keepIt;
+    }
+    
 }
 
 

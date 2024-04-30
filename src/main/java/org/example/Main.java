@@ -8,15 +8,16 @@ public class Main {
         myDDL.append(4);
         myDDL.append(5);
 
+        myDDL.insert(2, 15);
 //        myDDL.set(2, 15);
-        myDDL.remove(2);
+//        myDDL.remove(3);
 //        myDDL.get(15);
 //        myDDL.removeFirst();
 //        myDDL.prepend(0);
 //        myDDL.removeLast();
         myDDL.printList();
 
-        LinkedList myLinkedList = new LinkedList(1);
+//        LinkedList myLinkedList = new LinkedList(1);
 //
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
