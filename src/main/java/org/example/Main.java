@@ -8,9 +8,11 @@ public class Main {
         myDDL.append(4);
         myDDL.append(5);
 
-        myDDL.insert(2, 15);
+
+//        myDDL.swapFirstLast();
+//        myDDL.insert(2, 15);
 //        myDDL.set(2, 15);
-//        myDDL.remove(3);
+//        myDDL.remove(2);
 //        myDDL.get(15);
 //        myDDL.removeFirst();
 //        myDDL.prepend(0);

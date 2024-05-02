@@ -120,6 +120,7 @@ public class DDL {
 
         return true;
     }
+
     public void insert(int index, int value){
         if (index == 0){
             prepend(value);
@@ -136,7 +137,22 @@ public class DDL {
         temp.next = new Node(value);
         temp.next.next = keepIt;
     }
-    
+
+    public void swapFirstLast(){
+        if (length < 2) return;
+        int temp = head.value;
+        head.value = tail.value;
+        tail.value = temp;
+    }
+
+    public void reverse(){
+        Node temp = head;
+
+        while (temp.next != null){
+            temp = temp.next;
+        }
+    }
+
 }
 
 
