@@ -8,7 +8,7 @@ public class Main {
         myDDL.append(4);
         myDDL.append(5);
 
-
+        myDDL.reverse();
 //        myDDL.swapFirstLast();
 //        myDDL.insert(2, 15);
 //        myDDL.set(2, 15);

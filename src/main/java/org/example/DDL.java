@@ -147,9 +147,15 @@ public class DDL {
 
     public void reverse(){
         Node temp = head;
-
-        while (temp.next != null){
-            temp = temp.next;
+        head = tail;
+        tail = temp;
+        Node before = null;
+        Node after = null;
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
         }
     }
 
